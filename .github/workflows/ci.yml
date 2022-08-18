@@ -27,4 +27,5 @@ jobs:
         run: |
           curl -sL https://sentry.io/get-cli/ | bash
           sleep 3
-          sentry-cli send-event -m $(uuidgen)
+          set -x
+          sentry-cli send-event -f $(uuidgen)
