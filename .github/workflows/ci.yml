@@ -1,6 +1,8 @@
 name: dev env
 on:
   push:
+    branches:
+    - main
 
 jobs:
   create-sentry-release:
@@ -25,4 +27,4 @@ jobs:
         run: |
           curl -sL https://sentry.io/get-cli/ | bash
           sleep 3
-          sentry-cli send-event -m $(date)
+          sentry-cli send-event -m $(uuidgen)
