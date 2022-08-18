@@ -23,5 +23,6 @@ jobs:
         env:
           SENTRY_DSN: ${{ secrets.SENTRY_DSN }}
         run: |
-          sleep 10
+          curl -sL https://sentry.io/get-cli/ | bash
+          sleep 5
           sentry-cli send-event -m "Hello from Sentry"
