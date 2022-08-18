@@ -19,3 +19,9 @@ jobs:
           SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
         with:
           environment: production
+      - name: Wait and create error
+        env:
+          SENTRY_DSN: ${{ secrets.SENTRY_DSN }}
+        run: |
+          sleep 10
+          sentry-cli send-event -m "Hello from Sentry"
