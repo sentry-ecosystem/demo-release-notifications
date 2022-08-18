@@ -1,6 +1,6 @@
 name: dev env
 on:
-  push:
+  pull_request:
 
 jobs:
   create-sentry-release:
