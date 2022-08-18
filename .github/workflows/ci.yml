@@ -21,6 +21,7 @@ jobs:
           SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
         with:
           environment: production
+          ignore_empty: true
       - name: Wait and create error
         env:
           SENTRY_DSN: ${{ secrets.SENTRY_DSN }}
