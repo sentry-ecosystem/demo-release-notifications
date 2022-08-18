@@ -6,3 +6,4 @@ This will create a release and produce an error that will trigger a release noti
 - Fixed?
 - Hello there.
 - Gilbert should get a release notification
+- We now have demo-release-notifications as a valid project for release notifications
