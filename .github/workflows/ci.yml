@@ -28,4 +28,4 @@ jobs:
           curl -sL https://sentry.io/get-cli/ | bash
           sleep 3
           set -x
-          sentry-cli send-event -f $(uuidgen)
+          sentry-cli send-event -m $(uuidgen) -f $(uuidgen)
